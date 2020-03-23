@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const prompt = require('co-prompt');
 const ora = require('ora');
 const template = require('../template');
+const cp = require('child_process');
 
 const defaultBranch = 'master';
 
@@ -21,13 +22,14 @@ module.exports = () => {
         const proCmd = `git clone ${gitUrl} ${proName} && cd ${proName} && git checkout ${gitBranch}`;
         ora('开始初始化').start();
 
-        exec(proCmd, (err, stout, sterr) => {
+        cp.exec(proCmd, (err, stout, sterr) => {
             if (err) {
-                console.log(chalk.red(err));
+                console.log(`\n${chalk.red(err)}`);
+                ora('\n 初始化失败！').fail();
                 process.exit();
             }
 
-            console.log(chalk.green('\n 初始化成功！'));
+            ora('\n 初始化成功！').succeed();
             process.exit();
         });
     });

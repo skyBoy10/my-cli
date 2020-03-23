@@ -22,7 +22,7 @@ module.exports = () => {
                 console.log(err);
             }
 
-            console.log(chalk.green('\n 删除成功！'));
+            ora('\n 删除成功！').succeed();
             process.exit();
         });
     });

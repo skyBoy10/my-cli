@@ -26,7 +26,7 @@ module.exports = () => {
                 console.log(err);
             }
 
-            console.log(chalk.green('\n 添加成功!'));
+            ora('\n 添加成功!').succeed();
             process.exit();
         });
     });
