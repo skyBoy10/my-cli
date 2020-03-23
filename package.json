@@ -1,0 +1,30 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "sky": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyBoy10/my-cli.git"
+  },
+  "author": "sky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyBoy10/my-cli/issues"
+  },
+  "homepage": "https://github.com/skyBoy10/my-cli#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^5.0.0",
+    "download-git-repo": "^3.0.2",
+    "ora": "^4.0.3"
+  }
+}
